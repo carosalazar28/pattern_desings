@@ -35,6 +35,10 @@ class Drink{
 	constructor(name) {
 		this.name = name
 	}
+
+	info () {
+		return 'la bebida es:' + this.name
+	}
 }
 
 // funcional
@@ -49,3 +53,19 @@ console.log(drink.name)
 
 const drink2 = new Drink2('agua')
 console.log(drink2.info())
+
+// Herencia
+// Es un concepto de la POO para permitir extender un comportamiento
+class Beer extends Drink{
+	constructor(name, alcohol) {
+		// Acá se lo envio a la clase padre
+		super(name)
+		this.alcohol = alcohol
+	}
+	info() {
+		return super.info() + this.alcohol
+	}
+}
+
+const beer = new Beer('cerveza', '4.8')
+console.log('herencia', beer.info())
