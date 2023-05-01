@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Observer</title>
+</head>
+<body>
+  <!-- <input id="myText" type="text" oninput="change()"/>
+  <div id="div1"></div>
+  <div id="div2"></div> -->
+  <div>
+    <label> Nombre: </label>
+    <input id="name" type="text"/>
+  </div>
+
+  <h2>Iphone</h2>
+  <button onclick="subscribe('iphone')">Suscribirme</button>
+  <h6 id="iphone" class="available" style="color: red"></h6>
+
+  <h2>Mac</h2>
+  <button onclick="subscribe('mac')">Suscribirme</button>
+  <h6 id="mac" class="available" style="color: red"></h6>
+
+  <h2>Tablet</h2>
+  <button onclick="subscribe('tablet')">Suscribirme</button>
+  <h6 id="tablet" class="available" style="color: red"></h6>
+
+  <div>
+    <label> Producto disponible: </label>
+    <input id="product" type="text"/>
+    <button onclick="notify()"> Enviar correos </button> 
+  </div>
+
+  <div>
+    <h1 id="sendMails"></h1>
+  </div>
+
+  <script src="./observer.js"></scriptsrc>
+</body>
+</html>
